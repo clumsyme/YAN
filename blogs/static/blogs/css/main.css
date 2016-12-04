@@ -10,14 +10,21 @@ body {
 a {
     transition: color 0.3s;
     text-decoration: none;
-    color: inherit
+    color: #00A388;
+}
+a.site {
+    color: black;
 }
 /*a:visited {
     color: #5B5B5B
 }*/
 a:hover {
     transition: color 0.3s;
-    color: orangered
+    color: #FF6138
+}
+
+.current {
+    color: orangered;
 }
 
 #main {
@@ -31,23 +38,34 @@ a:hover {
 
 /*头部*/
 #header {
+    position: fixed;
+    display: flex;
+    background: #fcfcfc;
+    border-bottom: 1px solid #dddddd;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.04);
+    justify-content: center;
+    height: 90px;
+    transition: all 0.5s ease;
+    width: 100%;
+    z-index: 998;
+}
+
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgb(0, 0, 0);
-    color: white;
-    position: fixed;
+    color: #000;
+
     width: 100%;
-    height: 90px;
-    transition: height 0.2s ease;
-    z-index: 998;
+
 }
 
 /*头部logo区*/
 .logo {
     font-family: YouYuan;
-    font-size: 2em;
-    margin: 0 2em;
+    font-size: 1.5em;
+    margin: 0;
+    padding-left: 3em;
     opacity: 1;
     /*z-index: 998*/
 }
@@ -64,7 +82,7 @@ a:hover {
     display: inline-block;
     font-size: 1.5em;
     font-weight: 700;
-    margin: 0 2em;
+    padding: 0 2em;
 }
 
 /*文章区*/
@@ -77,7 +95,7 @@ a:hover {
 /*单篇文章*/
 article {
     background: #fff;
-    margin: 0 0 3em;
+    margin: 0 0 2em;
 }
 
 /*文章、侧栏、评论信息区(包含标题、作者、时间等信息)*/
@@ -108,7 +126,7 @@ article .title {
 
 /*文章内容*/
 article .content {
-    padding: 0 3em;
+    padding: 0 3em 1.5em;
     line-height: 1.45;
     border: 1px solid #d8d8d8;
     border-radius: 0 0 20px 20px;
@@ -238,7 +256,7 @@ aside li:nth-child(1) {
 
 /*评论表单区*/
 .commentform {
-    padding: 1em 3em;
+    padding: 0em 3em;
 }
 .commentform #submit {
     padding: 0.5em 1em;
@@ -337,19 +355,44 @@ aside li:nth-child(1) {
     border: 1px solid #d8d8d8;
 }
 
+footer {
+    background: black;
+    display: flex;
+    align-items: center;
+    color: #fff
+}
+
 @media (min-width:1250px){
-    #main {
+    #main, .header {
         width: 1200px
     }
 }
 
-@media (max-width:500px) {
+@media (max-width:670px) {
     .comment .content, article .content, .commentarea {
         padding: 1em;
     }
+    .logo, .navs {
+        padding: 0 1em;
+    }
+    .nav {
+        padding: 0 0.3em;
+    }
 }
 
-@media (max-aspect-ratio: 1/1){
+@media (max-aspect-ratio: 1/1) and (max-width: 670px){
+    #main {
+        padding: 90px 0
+    }
+    .articleinfo {
+        border: none;
+        border-radius: 0;
+    }
+    article .content {
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid;
+    }
     #article {
         width: 100%;
         margin: 0 auto;
@@ -361,9 +404,9 @@ aside li:nth-child(1) {
     aside {
         display: none
     }
-    nav li {
+    /*nav li {
         display: initial
-    }
+    }*/
 }
 
 
