@@ -83,6 +83,7 @@ article {
 /*文章、侧栏、评论信息区(包含标题、作者、时间等信息)*/
 .articleinfo, .asideinfo {
     padding: 1em;
+    background-color: #fcfcfc;
     /*color: white;*/
     border: 1px solid #d8d8d8;
     border-radius: 20px 20px 0 0;
