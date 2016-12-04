@@ -117,7 +117,20 @@ article .content {
 .content img {
     max-width: 100%
 }
-        
+
+.articletags {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 1em;
+}
+.articletags * {
+    font-size: 0.8em;
+    border-radius: 10px;
+    background: #23c1d1;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
 /*.article {
     border-bottom: 5px inset orange
 }*/
@@ -170,7 +183,13 @@ aside li {
 aside li:nth-child(1) {
     margin: 0
 }
-
+/*.tags {
+    display: flex
+}*/
+.tag {
+    display: inline-block;
+    margin: 0.5em;
+}
 
 /*箭头图案*/
 .slide .title::after {
@@ -200,14 +219,37 @@ aside li:nth-child(1) {
 
 /*评论表单输入框*/
 #comment form > * {
-    margin: 1em 0;
+    margin: 0.8em 0;
+}
+
+#thistag {
+    color: cornflowerblue;
+    font-weight: 700;
+}
+
+.readmore {
+    direction: rtl;
 }
 
 /*评论表单区*/
 .commentform {
-    padding: 3em;
+    padding: 1em 3em;
+}
+.commentform #submit {
+    padding: 0.5em 1em;
+    background: #cacbcd;
+    box-shadow: 0 0 0 0 #000;
+    outline: none;
+    border-radius: 10px;
+    border: 0;
+    font-size: 0.8em;
+    font-weight: 700;
+    cursor: pointer;
 }
 
+.commentform #submit:hover {
+    background: #c0c1c2
+}
 /*评论输入框*/
 #commentcontent {
     width: 100%;
