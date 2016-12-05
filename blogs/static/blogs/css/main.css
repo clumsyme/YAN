@@ -15,6 +15,9 @@ a {
 a.site {
     color: black;
 }
+a.readmore {
+    color: #FF6138;
+}
 /*a:visited {
     color: #5B5B5B
 }*/
@@ -24,7 +27,7 @@ a:hover {
 }
 
 .current {
-    color: orangered;
+    color: #FF6138;
 }
 
 #main {
@@ -64,14 +67,14 @@ a:hover {
 .logo {
     font-family: YouYuan;
     font-size: 1.5em;
-    margin: 0;
-    padding-left: 3em;
+    margin: 0 0 0 3em;
+    /*padding-left: 3em;*/
     opacity: 1;
     /*z-index: 998*/
 }
 
 /*导航列表*/
-.sitenav ul {
+.navs {
     margin: 0 1.5em;
     padding: 0;
     list-style: none;
@@ -87,7 +90,7 @@ a:hover {
 
 /*文章区*/
 #article {
-    width: 62%;
+    width: 63%;
     /*min-width: 500px;*/
     padding-top: 3em;
 }
@@ -142,16 +145,19 @@ article .content {
 }*/
 
 .articletags {
-    display: flex;
-    justify-content: flex-start;
-    padding-bottom: 1em;
+    /*display: flex;
+    justify-content: flex-start;*/
+    padding: 0;
+    margin: 0;
+    /*padding-bottom: 1em;*/
 }
-.articletags * {
+.tag {
     font-size: 0.8em;
     border-radius: 10px;
-    background: #23c1d1;
+    background: #ebebeb;
     margin: 0.5em;
     padding: 0.5em;
+    display: inline-block;
 }
 
 /*.article {
@@ -160,7 +166,7 @@ article .content {
 
 /*侧边栏*/
 aside {
-    width: 32%;
+    width: 33%;
     /*min-width: 350px;*/
     background: #fff;
     padding-top: 3em;
@@ -209,10 +215,6 @@ aside li:nth-child(1) {
 /*.tags {
     display: flex
 }*/
-.tag {
-    display: inline-block;
-    margin: 0.5em;
-}
 
 /*箭头图案*/
 .slide .title::after {
@@ -246,11 +248,11 @@ aside li:nth-child(1) {
 }
 
 #thistag {
-    color: cornflowerblue;
+    color: #FF6138;
     font-weight: 700;
 }
 
-.readmore {
+p.readmore {
     direction: rtl;
 }
 
@@ -372,8 +374,11 @@ footer {
     .comment .content, article .content, .commentarea {
         padding: 1em;
     }
-    .logo, .navs {
-        padding: 0 1em;
+    .logo {
+        margin: 0 0 0 1em;
+    }
+    .navs {
+        margin: 0 1em 0 0;
     }
     .nav {
         padding: 0 0.3em;
@@ -381,19 +386,23 @@ footer {
 }
 
 @media (max-aspect-ratio: 1/1) and (max-width: 670px){
+    body {
+        font-size: 15px;
+    }
     #main {
-        padding: 90px 0
+        padding: 90px 0 0;
+        flex-direction: column;
     }
     .articleinfo {
         border: none;
         border-radius: 0;
     }
-    article .content {
+    article .content, aside ul {
         border: none;
         border-radius: 0;
         border-bottom: 1px solid;
     }
-    #article {
+    #article, aside {
         width: 100%;
         margin: 0 auto;
     }
@@ -401,9 +410,9 @@ footer {
         display: none
     }
     
-    aside {
+    /*aside {
         display: none
-    }
+    }*/
     /*nav li {
         display: initial
     }*/
@@ -428,6 +437,7 @@ pre, code {
     /*font-size: 1em;*/
     line-height: 1.45;
     background-color: #f7f7f7;
+    overflow: auto;
 }
 pre {
     padding: 16px;
