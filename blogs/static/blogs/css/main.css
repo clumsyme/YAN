@@ -1,10 +1,15 @@
 body {
     margin: 0;
-    /*font-family: 幼圆;*/
+    font-family: 'HanHei SC', 'Microsoft YaHei', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     font-size: 14px;
+    font-weight: 400;
     /*background: #F2F2F2;*/
     /*color: #5B5B5B;*/
-    overflow: scroll
+    /*overflow: scroll;   */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
 }
 
 a {
@@ -13,21 +18,24 @@ a {
     color: #00A388;
 }
 a.site {
-    color: black;
+    /*color: #2C3E50;*/
+    color: #124D72
 }
 a.readmore {
-    color: #FF6138;
+    color: #E74C3C;
+    /*color: #FF6138;*/
 }
 /*a:visited {
     color: #5B5B5B
 }*/
 a:hover {
     transition: color 0.3s;
-    color: #FF6138
+    color: #E74C3C
 }
 
 .current {
-    color: #FF6138;
+    color: #E74C3C;
+    /*color: #FF6138;*/
 }
 
 #main {
@@ -92,7 +100,7 @@ a:hover {
 #article {
     width: 63%;
     /*min-width: 500px;*/
-    padding-top: 3em;
+    margin-top: 3em;
 }
 
 /*单篇文章*/
@@ -107,8 +115,9 @@ article {
     background-color: #fcfcfc;
     /*color: white;*/
     border: 1px solid #d8d8d8;
-    border-radius: 20px 20px 0 0;
-    cursor: pointer;
+    border-bottom: 1px solid #818181;
+    border-radius: 10px 10px 0 0;
+    /*cursor: pointer;*/
     margin: 0;
 }
 
@@ -117,12 +126,13 @@ article .title {
     margin: 0;
     font-size: 2em;
     font-weight: 700;
+    display: inline-block;
 }
 
 /*文章发布时间*/
 .pubdate {
     font-size: 0.8em;
-    margin-top: 1em 0;
+    margin-top: 1em;
     color: #9c9c9c;
     font-weight: 400;
 }
@@ -132,7 +142,7 @@ article .content {
     padding: 0 3em 1.5em;
     line-height: 1.45;
     border: 1px solid #d8d8d8;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 10px 10px;
 }
 
 .content img {
@@ -169,7 +179,7 @@ aside {
     width: 33%;
     /*min-width: 350px;*/
     background: #fff;
-    padding-top: 3em;
+    margin-top: 3em;
     /*padding: 3em;*/
     display: table
 }
@@ -196,13 +206,14 @@ aside > * {
 aside ul {
     border: 1px solid #d8d8d8;
     padding: 1em;
-    margin-top: 0;
+    margin: 0;
     list-style: none;
 }
 
 /*侧边栏内标题*/
 aside .title {
     margin: 0;
+    display: inline-block;
 }
 
 /*侧边栏内单个列表元素*/
@@ -212,30 +223,67 @@ aside li {
 aside li:nth-child(1) {
     margin: 0
 }
+
+#socials {
+    background: #fcfcfc;
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+}
+
+#socials > *{
+    flex: 1;
+    text-align: center;
+    /*color: #777777;*/
+    /*padding: 0 0.5em;*/
+    border-right: 1px solid #eaeaea;
+}
+#socials a:last-child{
+    border-right: none
+}
+/*#socials a:hover {
+    color: black
+}*/
+/*社交图表区*/
+/*.socials {
+    padding: 0
+}*/
+
+
 /*.tags {
     display: flex
 }*/
 
 /*箭头图案*/
-.slide .title::after {
-    content: '\25bc';
+.slideicon {
+    color: #777777;
+    padding: 3px;
+    cursor: pointer;
+    /*content: '\25bc';*/
+    font-size: 1rem;
     /*color: orange;*/
     float: right;
     transition: transform 0.5s;
     transform: rotate(0deg)
 }
-.slided .title::after {
-    content: '\25bc';
+.slidedicon {
+    color: #777777;
+    padding: 3px;
+    cursor: pointer;
+    /*content: '\25bc';*/
+    font-size: 1rem;
     /*color: orange;*/
     float: right;
     transition: transform 0.5s;
     transform: rotate(-90deg)
 }
-
-/*社交图表区*/
-.socials {
-    padding: 0
+.slideicon:hover, .slidedicon:hover {
+    color: black
 }
+
+
 
 /*#comment {
     padding: 3em;
@@ -245,6 +293,9 @@ aside li:nth-child(1) {
 /*评论表单输入框*/
 #comment form > * {
     margin: 0.8em 0;
+    padding: 0.5em 1em;
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
 }
 
 #thistag {
@@ -261,11 +312,12 @@ p.readmore {
     padding: 0em 3em;
 }
 .commentform #submit {
+    transition: background 0.3s;
     padding: 0.5em 1em;
-    background: #cacbcd;
-    box-shadow: 0 0 0 0 #000;
+    background: #E0E1E2;
+    color: rgba(0, 0, 0, 0.8);
     outline: none;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 0;
     font-size: 0.8em;
     font-weight: 700;
@@ -273,7 +325,8 @@ p.readmore {
 }
 
 .commentform #submit:hover {
-    background: #c0c1c2
+    background: #CACBCD;
+    color: rgb(0, 0, 0)
 }
 /*评论输入框*/
 #commentcontent {
@@ -302,8 +355,8 @@ p.readmore {
 .commentinfo {
     /*background-color: darkslategray;*/
     padding: 0 1em;
-    border-radius: 20px 20px 0 0;
-    cursor: pointer;
+    border-radius: 10px 10px 0 0;
+    /*cursor: pointer;*/
     margin: 0;
     display: flex;
     justify-content: space-between;
@@ -311,7 +364,7 @@ p.readmore {
     border: 2px solid #d8d8d8;
 }
 
-.comment .slide::after {
+/*.comment .slide::after {
     content: '\25bc';
     margin-left: calc(50px - 1em);
     transition: transform 0.5s;
@@ -322,7 +375,7 @@ p.readmore {
     margin-left: calc(50px - 1em);
     transition: transform 0.5s;
     transform: rotate(-90deg)
-}
+}*/
 
 
 .commentinfo img {
@@ -358,10 +411,13 @@ p.readmore {
 }
 
 footer {
-    background: black;
+    background: #fcfcfc;
+    border-top: 1px solid #dddddd;
+    box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.04);
     display: flex;
     align-items: center;
-    color: #fff
+    justify-content: center;
+    /*color: #fff*/
 }
 
 @media (min-width:1250px){
@@ -371,7 +427,8 @@ footer {
 }
 
 @media (max-width:670px) {
-    .comment .content, article .content, .commentarea {
+    .comment .content, article .content,
+    .commentform, .commentarea {
         padding: 1em;
     }
     .logo {
@@ -442,7 +499,9 @@ pre, code {
 pre {
     padding: 16px;
 }
-
+code {
+    padding: 0.2em;
+}
 
 /*.recent .title{
     border-bottom: 1px solid;
