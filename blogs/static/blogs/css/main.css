@@ -417,6 +417,9 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    /*position: absolute;
+    bottom: 0;
+    width: 100%;*/
     /*color: #fff*/
 }
 
@@ -457,7 +460,7 @@ footer {
     article .content, aside ul {
         border: none;
         border-radius: 0;
-        border-bottom: 1px solid;
+        /*border-bottom: 1px solid;*/
     }
     #article, aside {
         width: 100%;
