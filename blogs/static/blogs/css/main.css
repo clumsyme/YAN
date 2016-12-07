@@ -146,8 +146,10 @@ article .content {
 }
 
 .content img {
-    transition: transform 0.5s;
+    /*transition: transform 0.5s;*/
     max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 /*.content img:hover {
@@ -188,6 +190,10 @@ aside {
 aside > * {
     padding: 0;
     margin-bottom: 2em
+}
+
+#socials {
+    margin-bottom: 0;
 }
 
 /*aside .title {
@@ -392,7 +398,7 @@ p.readmore {
 .comment .author {
     font-size: 1rem;
     font-weight: 700;
-    color: orange;
+    /*color: orange;*/
     margin: 0 0 5px;
 }
 
