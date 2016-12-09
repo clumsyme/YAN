@@ -2,6 +2,7 @@ body {
     background: url('/static/home/img/404.gif');
     background-size: cover;
     background-position: 0 0;
+    background-color: #000;
     color: #fff;
     font-family: YouYuan;
 }
