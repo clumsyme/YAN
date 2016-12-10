@@ -13,7 +13,18 @@
 }
 
 #blogssitenav {
+    background: #333;
+    width: 100%;
+    color: #fff;
+    padding: 1em 0;
+    font-size: 1.5em;
+    padding-left: 1em;
+    box-sizing: border-box;
     display: none
+}
+
+#blogssitenav .fa {
+    transition: transform 0.5s;
 }
 
 /*文章区*/
@@ -122,17 +133,31 @@ aside {
     width: 30%;
     /*height: 100%;*/
     background: #333;
+    font-weight: 300;
     /*margin-top: 3em;*/
     /*display: table*/
 }
+
+.asidehead {
+    text-align: center;
+    font-size: 3em;
+    padding-top: 30px;
+}
+.asidehead > * {
+    margin: 20px;
+}
+.asidehead li {
+    font-size: 0.8rem
+}
+
 aside a {
     color: #fff
 }
 
 /*侧边栏直接子项*/
-aside > * {
-    padding: 0;
-    margin-bottom: 2em
+aside #recent,aside #tags {
+    /*padding: 0;*/
+    margin-bottom: 1em
 }
 
 #socials {
@@ -144,7 +169,7 @@ aside > * {
 /*侧边栏内列表*/
 aside ul {
     /*border: 1px solid #d8d8d8;*/
-    padding: 1em;
+    padding: 1.5em;
     margin: 0;
     list-style: none;
 }
@@ -156,12 +181,12 @@ aside .title {
 }
 
 /*侧边栏内单个列表元素*/
-aside li {
-    margin: 1em 0 0;
+aside #recent li, .aside #tags li {
+    margin: 0 0 1em;
 }
-aside li:nth-child(1) {
+/*aside li:nth-child(1) {
     margin: 0
-}
+}*/
 
 #socials {
     /*background: #fcfcfc;*/
@@ -315,7 +340,7 @@ p.readmore a, p.commentlink a {
 }
 
 footer {
-    background: #fcfcfc;
+    background: #333;
     border-top: 1px solid #dddddd;
     box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.04);
     display: flex;
@@ -347,12 +372,20 @@ footer {
         font-size: 15px;
     }*/
     #blogssitenav {
-        padding: 1em 0;
-        display: initial
+        display: block
     }
     #blogsmain {
         /*padding: 90px 0 0;*/
-        flex-direction: column-reverse;
+        flex-direction: column;
+    }
+    aside {
+        display: none
+    }
+    .asidehead {
+        padding: 0
+    }
+    .asidehead h1{
+        font-size: 1em;
     }
     .articleinfo {
         border: none;

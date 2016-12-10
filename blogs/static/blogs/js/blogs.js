@@ -9,6 +9,7 @@ window.onscroll = function () {
     }
 }
 $('.slideicon').click(function () {
+    // element = $(this).parent().next().slideToggle('slow')
     var element = $(this).parent().next()
     if (element.css('display') == 'none') {
         element.slideDown()
