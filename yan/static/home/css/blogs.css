@@ -1,0 +1,397 @@
+#container {
+    position: relative;
+    background: linear-gradient(to bottom, #4ba1b8, #e7e7e7,  #364983)
+}
+
+#blogsmain {
+    /*position: relative;*/
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    /*padding: 90px 20px 0 20px;*/
+    /*padding: 90px 0 0;*/
+}
+
+#blogssitenav {
+    display: none
+}
+
+/*文章区*/
+#article {
+    width: 70%;
+    background: #fff;
+    padding-top: 1em;
+    /*margin-top: 3em;*/
+}
+
+/*单篇文章*/
+article {
+    /*background: #fff;*/
+    margin: 0 0 2em;
+}
+
+article:last-of-type {
+    margin: 0
+}
+
+/*文章、侧栏、评论信息区(包含标题、作者、时间等信息)*/
+.articleinfo, .asideinfo {
+    padding: 1em;
+    /*background-color: #fcfcfc;*/
+    /*border: 1px solid #d8d8d8;*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /*border-radius: 10px 10px 0 0;*/
+    margin: 0;
+    text-align: center;
+}
+.asideinfo {
+    background-color: #333;
+    text-align: left;
+}
+
+/*文章标题*/
+article .title {
+    margin: 0;
+    font-size: 1.6em;
+    font-weight: 700;
+    display: inline-block;
+}
+
+/*文章发布时间*/
+.pubdate {
+    font-size: 0.8em;
+    margin-top: 1em;
+    color: #9c9c9c;
+    font-weight: 400;
+}
+
+/*文章内容*/
+article .content {
+    padding: 0 4em 1.5em;
+    line-height: 1.45;
+    /*border: 1px solid #d8d8d8;*/
+    border-radius: 0 0 10px 10px;
+    word-wrap:break-word;
+}
+
+.content img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.articlefooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #6c6c6c;
+}
+
+#pagenav {
+    margin: 1.5em 0;
+    text-align: center;
+}
+
+#pagenav > * {
+    padding: 0 4px;
+    margin: 2px;
+}
+
+.articletags {
+    padding: 0;
+    margin: 0;
+}
+
+.tag {
+    font-size: 0.8em;
+    border-radius: 10px;
+    background: #ebebeb;
+    margin: 0.5em;
+    padding: 0.5em;
+    display: inline-block;
+}
+
+aside .tag {
+    background: #1c1c1c;
+}
+
+/*侧边栏*/
+aside {
+    position: relative;
+    color: rgba(255, 255, 255, 0.3);
+    width: 30%;
+    /*height: 100%;*/
+    background: #333;
+    /*margin-top: 3em;*/
+    /*display: table*/
+}
+aside a {
+    color: #fff
+}
+
+/*侧边栏直接子项*/
+aside > * {
+    padding: 0;
+    margin-bottom: 2em
+}
+
+#socials {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 0;
+}
+
+/*侧边栏内列表*/
+aside ul {
+    /*border: 1px solid #d8d8d8;*/
+    padding: 1em;
+    margin: 0;
+    list-style: none;
+}
+
+/*侧边栏内标题*/
+aside .title {
+    margin: 0;
+    display: inline-block;
+}
+
+/*侧边栏内单个列表元素*/
+aside li {
+    margin: 1em 0 0;
+}
+aside li:nth-child(1) {
+    margin: 0
+}
+
+#socials {
+    /*background: #fcfcfc;*/
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    /*border: 1px solid #d8d8d8;*/
+    /*border-radius: 10px;*/
+}
+
+#socials > *{
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+#socials a:last-child{
+    border-right: none
+}
+
+/*箭头图案*/
+.slideicon {
+    color: #777777;
+    padding: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+    float: right;
+    transition: transform 0.5s;
+    transform: rotate(0deg)
+}
+.slidedicon {
+    color: #777777;
+    padding: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+    float: right;
+    transition: transform 0.5s;
+    transform: rotate(-90deg)
+}
+.slideicon:hover, .slidedicon:hover {
+    color: black
+}
+
+/*评论表单输入框*/
+#comment form > * {
+    margin: 0.8em 0;
+    padding: 0.5em 1em;
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+}
+
+#thistag {
+    color: #FF6138;
+    font-weight: 700;
+}
+
+/*评论表单区*/
+.commentform {
+    padding: 0em 3em;
+}
+.commentform #submit {
+    transition: background 0.3s;
+    padding: 0.5em 1em;
+    background: #E0E1E2;
+    color: rgba(0, 0, 0, 0.8);
+    outline: none;
+    border-radius: 5px;
+    border: 0;
+    font-size: 0.8em;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.commentform #submit:hover {
+    background: #CACBCD;
+    color: rgb(0, 0, 0)
+}
+/*评论输入框*/
+#commentcontent {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto
+}
+
+/*显示评论区*/
+.commentarea {
+    padding:0 3em;
+}
+
+.commentarea ol {
+    list-style: none;
+    padding: 0;
+    margin-top: 2em;
+}
+
+/*单个评论*/
+.comment {
+    margin: 0 0 3em;
+}
+
+/*评论信息（头像、作者、时间...）*/
+.commentinfo {
+    padding: 0 1em;
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.commentinfo img {
+    max-width: 50px;
+    margin-right: 1em;
+}
+
+.authorblock {
+    display: flex;
+    align-items: center;
+}
+
+/*评论作者*/
+.comment .author {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 5px;
+}
+
+/*评论时间*/
+.comment .date {
+    font-size: 0.8em;
+}
+
+/*评论内容区*/
+.comment .content {
+    position: relative;
+    padding: 0 3em;
+    line-height: 2;
+    margin: 0;
+    padding-left: calc(50px + 2em);
+    word-wrap: break-word;
+}
+
+p.readmore, p.commentlink {
+    text-align: right;
+    font-size: 1.25em;
+    min-width: 4em;
+    margin: 0.5em;
+}
+p.readmore a, p.commentlink a {
+    color: #E74C3C;
+}
+
+footer {
+    background: #fcfcfc;
+    border-top: 1px solid #dddddd;
+    box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width:1250px){
+    #blogsmain, .header {
+        width: 1200px
+    }
+}
+
+@media (max-width:670px) {
+    .comment .content, article .content,
+    .commentform, .commentarea {
+        padding: 1em;
+    }
+    /*.navs {
+        margin: 0 1em 0 0;
+    }
+    .nav {
+        padding: 0 0.3em;
+    }*/
+}
+
+@media (max-aspect-ratio: 1/1) and (max-width: 670px){
+    /*body {
+        font-size: 15px;
+    }*/
+    #blogssitenav {
+        padding: 1em 0;
+        display: initial
+    }
+    #blogsmain {
+        /*padding: 90px 0 0;*/
+        flex-direction: column-reverse;
+    }
+    .articleinfo {
+        border: none;
+        border-radius: 0;
+    }
+    article .content, aside ul {
+        border: none;
+        border-radius: 0;
+    }
+    #article, aside {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .slide .title::after, .slided .title::after {
+        display: none
+    }
+}
+
+/*markdown*/
+blockquote {
+    padding: 1em 2em;
+    margin: 1em 0;
+    border-left: 2px solid deepskyblue;
+    font-style: italic;
+    background: whitesmoke
+}
+blockquote p {
+    margin: 0;
+}
+
+pre, code {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    overflow: auto;
+}
+pre {
+    padding: 16px;
+}
+code {
+    padding: 0.2em;
+}

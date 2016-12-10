@@ -1,0 +1,72 @@
+.about {
+    display: flex;
+    /*justify-content: center;*/
+    flex-direction: column;
+    align-items: center;
+    /*text-align: center;*/
+    padding-top: 120px;
+}
+        
+.divider {
+    /*text-align: center;*/
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+        
+.divider span {
+    /*font-size: 1.5em;*/
+    font-weight: 400;
+    margin: 0 1em;
+}
+        
+.before, .after {
+    width: 100px;
+    height: 1.5px;
+    border-radius: 50%;
+    background: #000;
+}
+
+#aboutsocials > * {
+    margin: 0.45em
+}
+.imginfo {
+    font-size: 0.8em;
+    margin-top: 1em;
+    color: #2d2d2d;
+    font-style: italic;
+}
+#dummy {
+    position: relative;
+    align-self: center;
+    margin: 0 auto;
+    display: block;
+    /*width: 100%;*/
+    transform-origin: 50% 100%;
+    cursor: pointer;
+}
+        
+@keyframes jiaren {
+    0% { transform: rotateX(0); }
+    50% { transform: rotateX(50deg); }
+    100% { transform: rotateX(0deg); }
+}
+        
+@keyframes xunhuan {
+    100% {
+        transform: rotateX(0)
+    }
+}
+        
+@keyframes zhaoshou {
+    0% { transform: rotate(0); }
+    20% { transform: rotate(18deg); }
+    25% { transform: rotate(20deg); }
+    30% { transform: rotate(18deg); }
+    50% { transform: rotate(0); }
+    70% { transform: rotate(-18deg); }
+    75% { transform: rotate(-20deg); }
+    80% { transform: rotate(-18deg); }
+    100% { transform: rotate(0); }
+}

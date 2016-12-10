@@ -20,11 +20,26 @@ body {
     max-width: 480px;
     padding: 20px;
     text-align: center;
-    /*background: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));*/
 }
 
 .emoji {
     font-size: 4em;
     margin: 0;
     z-index: 9980;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    outline: none;
+    border: 1px solid #fff;
+    padding: 0.5em;
+    display: inline-block;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: all 0.3s
+}
+a:hover {
+    /*color: #000;*/
+    /*border-color: #000*/
 }

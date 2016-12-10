@@ -1,0 +1,33 @@
+#projectsmain {
+    padding-top: 90px;
+    width: 60%;
+    margin: 0 auto;
+}
+    
+.ui.slide.reveal .introduction {
+    font-family: 'Source Coode Pro', consolas;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    background-color: #fcfcfc;
+    /*text-align: center;*/
+    padding: 1em;
+    box-sizing: border-box;
+    white-space: normal;
+    border-radius: .28571429rem .28571429rem 0 0!important;
+    /*font-size: medium;*/
+}
+.ui.slide.reveal .introduction * {
+    margin: 3px;
+}
+.ui.slide.reveal .introduction p {
+    font-size: 0.8rem;
+    /*text-decoration: underline;*/
+}
+@media (max-width: 800px) {
+    #projectsmain {
+        width: 80%
+    }
+}
