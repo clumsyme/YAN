@@ -52,18 +52,18 @@ article:last-of-type {
     margin: 0;
     text-align: center;
 }
-.asideinfo {
+/*.asideinfo {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     background-color: #333;
     text-align: left;
-}
+}*/
 
 /*文章标题*/
 article .title {
     margin: 0;
     font-size: 2em;
     /*font-weight: 700;*/
-    display: inline-block;
+    /*display: inline-block;*/
 }
 
 /*文章发布时间*/
@@ -72,14 +72,19 @@ article .title {
     margin-top: 1em;
     color: #9c9c9c;
     font-weight: 400;
+    display: inline-block;
+}
+.pos.pubdate {
+    position: relative;
+    left: 1em;
 }
 
 /*文章内容*/
 article .content {
     /*padding: 0 4em 1.5em;*/
-    line-height: 1.45;
+    line-height: 1.6;
     /*border: 1px solid #d8d8d8;*/
-    border-radius: 0 0 10px 10px;
+    /*border-radius: 0 0 10px 10px;*/
     word-wrap:break-word;
 }
 
@@ -132,19 +137,20 @@ aside {
     /*height: 100%;*/
     background: #333;
     font-weight: 300;
+    /*box-shadow: 3px 0 5px rgba(0, 0, 0, 0.3);*/
     /*margin-top: 3em;*/
     /*display: table*/
 }
 
 
 aside > * {
-    padding: 1em 2em;
+    padding: 2em;
     border-top: 1px solid rgba(255, 255, 255, 0.1)
 }
 
 
 .asidehead {
-    padding: 30px 0 0 0;
+    padding: 30px 0;
     text-align: center;
     font-size: 3em;
     border: none;
@@ -168,9 +174,7 @@ aside #recent, aside #tags {
 }
 
 #socials {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    margin-bottom: 0;
+
 }
 
 /*侧边栏内列表*/
@@ -193,18 +197,22 @@ aside .title {
 }
 
 /*侧边栏内单个列表元素*/
-aside #recent li, .aside #tags li {
-    /*margin: 0 0 1em;*/
+aside #recent li{
+    margin: 0 0 7px;
 }
 /*aside li:nth-child(1) {
     margin: 0
 }*/
 
 #socials {
+    
     /*background: #fcfcfc;*/
     display: flex;
     justify-content: space-around;
-    padding: 1em;
+    /*padding: 1em;*/
+    /*border-top: 1px solid rgba(255, 255, 255, 0.1);*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /*margin-bottom: 0;*/
     /*border: 1px solid #d8d8d8;*/
     /*border-radius: 10px;*/
 }
@@ -250,8 +258,15 @@ aside #recent li, .aside #tags li {
 }
 
 #thistag {
-    color: #FF6138;
-    font-weight: 700;
+    padding: 1em 2em;
+    margin: 0;
+    background: #333;
+    color: #fcfcfc;
+    text-align: center;
+}
+#thistag span {
+    color: #CDFF60;
+    font-size: 1.2em;
 }
 
 /*评论表单区*/
@@ -300,18 +315,19 @@ aside #recent li, .aside #tags li {
 
 /*评论信息（头像、作者、时间...）*/
 .commentinfo {
-    padding: 0 1em;
-    border-radius: 10px 10px 0 0;
+    /*padding: 0 1em;*/
+    /*border-radius: 10px 10px 0 0;*/
     margin: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #d8d8d8;
+    border-bottom: 1px solid #b8b8b8;
 }
 
 .commentinfo img {
     max-width: 50px;
     margin-right: 1em;
+    border-radius: 50%;
 }
 
 .authorblock {
@@ -322,7 +338,7 @@ aside #recent li, .aside #tags li {
 /*评论作者*/
 .comment .author {
     font-size: 1rem;
-    font-weight: 700;
+    /*font-weight: 700;*/
     margin: 0 0 5px;
 }
 
@@ -337,7 +353,7 @@ aside #recent li, .aside #tags li {
     padding: 0 3em;
     line-height: 2;
     margin: 0;
-    padding-left: calc(50px + 2em);
+    padding-left: calc(50px + 1em);
     word-wrap: break-word;
 }
 
@@ -369,6 +385,9 @@ footer {
 @media (max-width:670px) {
     .comment .content, article,
     .commentform, .commentarea {
+        padding: 2em 1em;
+    }
+    aside > * {
         padding: 1em;
     }
 }
@@ -393,17 +412,17 @@ footer {
     .asidehead h1{
         font-size: 1em;
     }
-    .articleinfo {
+    /*.articleinfo {
         border: none;
         border-radius: 0;
-    }
-    article .title {
-        font-size: 1.5em;
-    }
-    article .content, aside ul {
+    }*/
+    /*article .title {
+        font-size: 2em;
+    }*/
+    /*article .content, aside ul {
         border: none;
         border-radius: 0;
-    }
+    }*/
     #article, aside {
         width: 100%;
         margin: 0 auto;
@@ -428,7 +447,7 @@ blockquote p {
 pre, code {
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     line-height: 1.45;
-    background-color: #f7f7f7;
+    background-color: #ebebeb;
     overflow: auto;
 }
 pre {
