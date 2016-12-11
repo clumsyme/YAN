@@ -15,7 +15,7 @@
 #blogssitenav {
     background: #333;
     width: 100%;
-    color: #fff;
+    color: #fcfcfc;
     padding: 1em 0;
     font-size: 1.5em;
     padding-left: 1em;
@@ -30,15 +30,17 @@
 /*文章区*/
 #article {
     width: 70%;
-    background: #fff;
-    padding-top: 1em;
+    background: #fcfcfc;
+    /*padding-top: 1em;*/
     /*margin-top: 3em;*/
 }
 
 /*单篇文章*/
 article {
+    padding: 4em;
+    border-bottom: 1px solid #b8b8b8;
     /*background: #fff;*/
-    margin: 0 0 2em;
+    /*margin: 0 0 2em;*/
 }
 
 article:last-of-type {
@@ -46,16 +48,12 @@ article:last-of-type {
 }
 
 /*文章、侧栏、评论信息区(包含标题、作者、时间等信息)*/
-.articleinfo, .asideinfo {
-    padding: 1em;
-    /*background-color: #fcfcfc;*/
-    /*border: 1px solid #d8d8d8;*/
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    /*border-radius: 10px 10px 0 0;*/
+.articleinfo{
     margin: 0;
     text-align: center;
 }
 .asideinfo {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     background-color: #333;
     text-align: left;
 }
@@ -63,8 +61,8 @@ article:last-of-type {
 /*文章标题*/
 article .title {
     margin: 0;
-    font-size: 1.6em;
-    font-weight: 700;
+    font-size: 2em;
+    /*font-weight: 700;*/
     display: inline-block;
 }
 
@@ -78,7 +76,7 @@ article .title {
 
 /*文章内容*/
 article .content {
-    padding: 0 4em 1.5em;
+    /*padding: 0 4em 1.5em;*/
     line-height: 1.45;
     /*border: 1px solid #d8d8d8;*/
     border-radius: 0 0 10px 10px;
@@ -95,7 +93,7 @@ article .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid #6c6c6c;
+    border-top: 1px solid #c9c9c9;
 }
 
 #pagenav {
@@ -138,10 +136,19 @@ aside {
     /*display: table*/
 }
 
+
+aside > * {
+    padding: 1em 2em;
+    border-top: 1px solid rgba(255, 255, 255, 0.1)
+}
+
+
 .asidehead {
+    padding: 30px 0 0 0;
     text-align: center;
     font-size: 3em;
-    padding-top: 30px;
+    border: none;
+    /*padding-top: 30px;*/
 }
 .asidehead > * {
     margin: 20px;
@@ -151,13 +158,13 @@ aside {
 }
 
 aside a {
-    color: #fff
+    color: #fcfcfc
 }
 
 /*侧边栏直接子项*/
-aside #recent,aside #tags {
+aside #recent, aside #tags {
     /*padding: 0;*/
-    margin-bottom: 1em
+    /*margin-bottom: 1em*/
 }
 
 #socials {
@@ -167,22 +174,27 @@ aside #recent,aside #tags {
 }
 
 /*侧边栏内列表*/
-aside ul {
+aside #recent ul {
     /*border: 1px solid #d8d8d8;*/
-    padding: 1.5em;
+    margin: 0 0 0 1em;
+    padding: 0;
+    /*list-style: none;*/
+}
+
+aside #tags ul {
     margin: 0;
-    list-style: none;
+    padding: 0;
 }
 
 /*侧边栏内标题*/
 aside .title {
-    margin: 0;
+    margin: 0 0 1em;
     display: inline-block;
 }
 
 /*侧边栏内单个列表元素*/
 aside #recent li, .aside #tags li {
-    margin: 0 0 1em;
+    /*margin: 0 0 1em;*/
 }
 /*aside li:nth-child(1) {
     margin: 0
@@ -340,7 +352,7 @@ p.readmore a, p.commentlink a {
 }
 
 footer {
-    background: #333;
+    background: #fcfcfc;
     border-top: 1px solid #dddddd;
     box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.04);
     display: flex;
@@ -355,16 +367,10 @@ footer {
 }
 
 @media (max-width:670px) {
-    .comment .content, article .content,
+    .comment .content, article,
     .commentform, .commentarea {
         padding: 1em;
     }
-    /*.navs {
-        margin: 0 1em 0 0;
-    }
-    .nav {
-        padding: 0 0.3em;
-    }*/
 }
 
 @media (max-aspect-ratio: 1/1) and (max-width: 670px){
@@ -390,6 +396,9 @@ footer {
     .articleinfo {
         border: none;
         border-radius: 0;
+    }
+    article .title {
+        font-size: 1.5em;
     }
     article .content, aside ul {
         border: none;
